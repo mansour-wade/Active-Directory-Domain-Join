@@ -28,7 +28,7 @@ Domain-joining the Linux and Windows clients built earlier in this lab to the `l
  
 Rocky Linux (`10.0.1.2`) is now fully joined to `lab.local` using realmd and SSSD. Before attempting the join, I confirmed DNS was pointing correctly at DC01 (`10.0.3.10`), including SRV record resolution for `_ldap._tcp` and `_kerberos._tcp`, since `realm join` depends on both to locate the domain controller and authenticate the join itself.
  
-After joining, I tested an actual AD login with a domain user and confirmed the UID, GID, and group membership all resolved from AD rather than local `/etc/passwd`. I also left the domain and rejoined it while running a live `tcpdump` capture on the Ubuntu gateway, so the Kerberos (port 88), LDAP (port 389), and DNS (port 53) traffic from a real join is captured in full and available in `configs/domain-join-full.pcap`.
+After joining, I tested an actual AD login with a domain user and confirmed the UID, GID, and group membership all resolved from AD rather than local `/etc/passwd`. To capture the join traffic itself, I rejoined the domain with tcpdump running on the Ubuntu gateway, giving a full packet capture of the Kerberos (88), LDAP (389), and DNS (53) exchange, available in `configs/domain-join-full.pcap`.
  
 Fedora, Windows 11, GPO verification, and the final AD-side confirmation of all joined clients are not done yet. Those are listed under [What's Left](#whats-left).
  
