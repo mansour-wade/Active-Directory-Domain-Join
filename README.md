@@ -43,7 +43,7 @@ Fedora, Windows 11, GPO verification, and the final AD-side confirmation of all 
 | Gateway OS | Ubuntu Server |
 | Domain Controller | Windows Server 2022 Datacenter Evaluation |
 | AD Domain | lab.local |
-| Clients Being Joined | Rocky Linux 9 (10.0.1.2) — joined; Fedora (10.0.1.3) — not yet started; Windows 11 (10.0.1.4) — not yet started |
+| Clients Being Joined | Rocky Linux 9 (10.0.1.2) ; Fedora (10.0.1.3) ; Windows 11 (10.0.1.4) |
 | Join Method (Linux) | realmd + SSSD + adcli |
 | Packet Capture | tcpdump (Ubuntu gateway, enp0s8) |
  
@@ -56,3 +56,4 @@ Fedora, Windows 11, GPO verification, and the final AD-side confirmation of all 
 | [domain-join-full.pcap](configs/domain-join-full.pcap) | captured on Ubuntu enp0s8 | Full packet capture of Rocky's domain join, showing DNS SRV lookups, Kerberos AS-REQ/AS-REP exchanges, and LDAP bind/search traffic between Rocky and DC01. Open in Wireshark for protocol-level detail. |
  
 ---
+ 
