@@ -212,7 +212,7 @@ The `realm list` output tells you the exact login format a domain expects before
 
 ## What's Left
 
-Still need to run ldapsearch from Rocky against AD, then join Fedora and Windows 11 the same way Rocky was joined. Once all three clients are in, gpresult /r on Windows 11 should confirm the four GPOs from Project 3 applied, and Get-ADComputer -Filter * on DC01 should show all three as domain members. Last step is a basic hostname ping test between the joined clients to confirm AD DNS is resolving them correctly.
+I still need to run ldapsearch from Rocky against AD, then join Fedora and Windows 11 the same way Rocky was joined. Once all three clients are in, gpresult /r on Windows 11 should confirm the four GPOs from Project 3 applied, and Get-ADComputer -Filter * on DC01 should show all three as domain members. Last step is a basic hostname ping test between the joined clients to confirm AD DNS is resolving them correctly.
 
 ---
 
