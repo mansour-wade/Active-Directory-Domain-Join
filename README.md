@@ -212,12 +212,7 @@ The `realm list` output tells you the exact login format a domain expects before
 
 ## What's Left
 
-- [ ] `ldapsearch` from Rocky Linux to query AD directly over LDAP
-- [ ] Fedora domain join via realmd/SSSD, with a GUI login test using an AD user
-- [ ] Windows 11 domain join via Settings > Accounts > Access work or school
-- [ ] `gpresult /r` on Windows 11 to confirm all four GPOs from Project 3 applied correctly
-- [ ] `Get-ADComputer -Filter *` on DC01 to confirm all three clients show up as joined
-- [ ] Hostname-based connectivity check from Rocky to Fedora and Windows 11 once all three are joined
+Still need to run ldapsearch from Rocky against AD, then join Fedora and Windows 11 the same way Rocky was joined. Once all three clients are in, gpresult /r on Windows 11 should confirm the four GPOs from Project 3 applied, and Get-ADComputer -Filter * on DC01 should show all three as domain members. Last step is a basic hostname ping test between the joined clients to confirm AD DNS is resolving them correctly.
 
 ---
 
