@@ -62,7 +62,7 @@ Fedora, Windows 11, GPO verification, and the final AD-side confirmation of all 
 
 ### 1. DNS Prerequisite Check on Rocky Linux
 
-Before attempting any domain join, I confirmed DNS on Rocky's labnet interface (`enp0s3`) was pointing at DC01. My first pass caught DNS still resolving to `8.8.8.8`, a leftover public resolver that would never resolve `lab.local` or its SRV records. I also initially configured DNS on the wrong interface entirely before catching the mistake with `ip route`. That's documented in [Issue 1](#issue-1-dns-configured-on-the-wrong-interface) below.
+Before attempting any domain join, I confirmed DNS on Rocky's labnet interface (`enp0s3`) was pointing at DC01. My first pass caught DNS still resolving to `8.8.8.8`, an inherited public resolver that would never resolve `lab.local` or its SRV records. I also initially configured DNS on the wrong interface entirely before catching the mistake with `ip route`. That's documented in [Issue 1](#issue-1-dns-configured-on-the-wrong-interface) below.
 
 Once DNS was corrected, I verified full resolution:
 
